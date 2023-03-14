@@ -52,7 +52,7 @@ const Monster = () => {
           </thead>
           <tbody>
             {monsters.map((monster) => (
-              <tr key={monster.id}>
+              <tr key={monster._id}>
                 <td className="border border-gray-400 bg-gray-200 px-20 py-5">
                   {monster.name}
                 </td>
