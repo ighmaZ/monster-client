@@ -31,10 +31,11 @@ const Monster = () => {
 
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-20">
         <div>
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-5 my-40"
+            id="btn-add"
+            className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-5 my-40"
             onClick={routeChange}
           >
             Add monsters
@@ -53,18 +54,19 @@ const Monster = () => {
           <tbody>
             {monsters.map((monster) => (
               <tr key={monster._id}>
-                <td className="border border-gray-400 bg-gray-200 px-20 py-5">
+                <td className="border border-gray-400  px-20 py-5">
                   {monster.name}
                 </td>
-                <td className="border border-gray-400 bg-gray-200 px-20 py-5">
+                <td className="border border-gray-400  px-20 py-5">
                   {monster.description}
                 </td>
-                <td className="border border-gray-400 bg-gray-200 px-20 py-5">
+                <td className="border border-gray-400  px-20 py-5">
                   {monster.kills}
                 </td>
                 <td>
                   <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2 border border-gray-400  "
+                    id="btn-delete"
+                    className="bg-pink-500 hover:bg-pink-700 text-black font-bold py-2 px-4 rounded mx-2 border border-gray-400  "
                     onClick={() => {
                       deleteMonsterHandler(monster._id);
                     }}
